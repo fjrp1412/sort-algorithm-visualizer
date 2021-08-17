@@ -1,2 +1,5 @@
 BLUE = "#1017e6"
 GREEN = "#31e319"
+CYAN = "#03fccf"
+RED = "#fc0335"
+YELLOW = "#f2f205"

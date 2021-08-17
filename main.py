@@ -4,6 +4,9 @@ from tkinter import ttk
 import random
 import colors
 from algorithms.bubble_sort import bubble_sort
+from algorithms.merge_sort import merge_sort
+from algorithms.insertion_sort import insertion_sort
+from time import sleep
 
 CANVAS_WIDTH = 900
 CANVAS_HEIGHT = 400
@@ -17,7 +20,7 @@ root.maxsize(1000, 900)
 
 def generate_array(canvas):
     global array
-    array = [random.randint(1, 100) for i in range(100)]
+    array = [random.randint(1, 100) for i in range(200)]
     draw_data(canvas, array, [colors.BLUE for i in range(len(array))])
 
 
@@ -53,7 +56,14 @@ def sort_start(canvas, array, option, speed):
     if option == "Bubble Sort":
         bubble_sort(canvas, draw_data, array, speed)
 
-        pass
+    if option == "Merge Sort":
+        merge_sort(canvas, draw_data, 0, len(array)-1, array, speed)
+
+    if option == "Insertion Sort":
+        insertion_sort(canvas, draw_data, array, speed)
+
+    sleep(0.5)
+    draw_data(canvas, array, [colors.GREEN for i in range(len(array))])
 
 
 def run():
