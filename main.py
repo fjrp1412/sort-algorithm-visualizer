@@ -8,14 +8,13 @@ from algorithms.merge_sort import merge_sort
 from algorithms.insertion_sort import insertion_sort
 from time import sleep
 
-CANVAS_WIDTH = 900
-CANVAS_HEIGHT = 400
+CANVAS_WIDTH = 1200
+CANVAS_HEIGHT = 600
 SORTS_ARRAY = ["Bubble Sort", "Quick Sort", "Merge Sort",
                "Insertion Sort", "Heap Sort", "Counting Sort", "Selection Sort"
                ]
 root = tk.Tk()
 root.config(bg="#fff")
-root.maxsize(1000, 900)
 
 
 def generate_array(canvas, size):
