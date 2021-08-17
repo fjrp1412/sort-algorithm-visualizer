@@ -18,9 +18,9 @@ root.config(bg="#fff")
 root.maxsize(1000, 900)
 
 
-def generate_array(canvas):
+def generate_array(canvas, size):
     global array
-    array = [random.randint(1, 100) for i in range(200)]
+    array = [random.randint(1, 100) for i in range(size)]
     draw_data(canvas, array, [colors.BLUE for i in range(len(array))])
 
 
@@ -86,7 +86,7 @@ def run():
     menu_speed.current(0)
 
     button_array = tk.Button(ui, text="Generate Array",
-                             command=lambda: generate_array(canvas))
+                             command=lambda: generate_array(canvas, int(array_size.get())))
 
     button_array.grid(row=2, column=0)
 
@@ -94,6 +94,11 @@ def run():
                              command=lambda: sort_start(canvas, array, menu_algorithms.get(), speed_time(menu_speed)))
 
     button_start.grid(row=2, column=1)
+
+    label_array_size = tk.Label(ui, text="Insert the size of array:")
+    array_size = tk.Entry(ui)
+    label_array_size.grid(row=2, column=2)
+    array_size.grid(row=2, column=3)
 
     canvas = tk.Canvas(root, width=CANVAS_WIDTH,
                        height=CANVAS_HEIGHT, bg="#fff")
