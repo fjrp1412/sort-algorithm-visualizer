@@ -6,6 +6,7 @@ import colors
 from algorithms.bubble_sort import bubble_sort
 from algorithms.merge_sort import merge_sort
 from algorithms.insertion_sort import insertion_sort
+from algorithms.selection_sort import selection_sort
 from time import sleep
 
 CANVAS_WIDTH = 1200
@@ -60,6 +61,9 @@ def sort_start(canvas, array, option, speed):
 
     if option == "Insertion Sort":
         insertion_sort(canvas, draw_data, array, speed)
+
+    if option == "Selection Sort":
+        selection_sort(canvas, draw_data, array, speed)
 
     sleep(0.5)
     draw_data(canvas, array, [colors.GREEN for i in range(len(array))])
