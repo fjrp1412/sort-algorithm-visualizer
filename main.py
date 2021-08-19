@@ -8,6 +8,7 @@ from algorithms.merge_sort import merge_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.selection_sort import selection_sort
 from algorithms.counting_sort import counting_sort
+from algorithms.quick_sort import quick_sort
 from time import sleep
 
 CANVAS_WIDTH = 1200
@@ -45,7 +46,7 @@ def draw_data(canvas, array, rectangle_colors):
 def speed_time(option_list):
     speed = option_list.get()
     if speed == "Slow":
-        speed = 0.3
+        speed = 0.2
     elif speed == "Normal":
         speed = 0.1
     else:
@@ -68,6 +69,9 @@ def sort_start(canvas, array, option, speed):
 
     if option == "Counting Sort":
         counting_sort(canvas, draw_data, array, speed)
+
+    if option == "Quick Sort":
+        quick_sort(canvas, draw_data, speed, array, 0, len(array)-1)
 
     sleep(0.5)
     draw_data(canvas, array, [colors.GREEN for i in range(len(array))])
