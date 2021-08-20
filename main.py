@@ -9,15 +9,17 @@ from algorithms.insertion_sort import insertion_sort
 from algorithms.selection_sort import selection_sort
 from algorithms.counting_sort import counting_sort
 from algorithms.quick_sort import quick_sort
+from algorithms.heap_sort import heap_sort
 from time import sleep
 
-CANVAS_WIDTH = 1200
-CANVAS_HEIGHT = 600
+
 SORTS_ARRAY = ["Bubble Sort", "Quick Sort", "Merge Sort",
                "Insertion Sort", "Heap Sort", "Counting Sort", "Selection Sort"
                ]
 root = tk.Tk()
 root.config(bg="#fff")
+CANVAS_WIDTH = 1500
+CANVAS_HEIGHT = 600
 
 
 def generate_array(canvas, size):
@@ -72,6 +74,9 @@ def sort_start(canvas, array, option, speed):
 
     if option == "Quick Sort":
         quick_sort(canvas, draw_data, speed, array, 0, len(array)-1)
+
+    if option == "Heap Sort":
+        heap_sort(canvas, draw_data, speed, array)
 
     sleep(0.5)
     draw_data(canvas, array, [colors.GREEN for i in range(len(array))])
