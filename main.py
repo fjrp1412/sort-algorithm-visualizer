@@ -24,7 +24,7 @@ CANVAS_HEIGHT = 600
 
 def generate_array(canvas, size):
     global array
-    array = [random.randint(1, 100) for i in range(size)]
+    array = [random.randint(1, 500) for i in range(size)]
     draw_data(canvas, array, [colors.BLUE for i in range(len(array))])
 
 
