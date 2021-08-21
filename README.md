@@ -4,19 +4,21 @@ Just clone the repo and run it.
 Maded in Python3.9.6
 
 ## Implemented Algorithms
-**Quick Sort**
-**Merge Sort**
-**Heap Sort**
-**Bubble Sort**
-**Insertion Sort**
-**Selection Sort**
-**Counting Sort**
-**Stupid Sort 5 elements max**
+
+ - **Quick Sort**
+ - **Merge Sort**
+ - **Heap Sort**
+ - **Bubble Sort**
+ - **Insertion Sort**
+ - **Selection Sort**
+ - **Counting Sort**
+ - **Stupid Sort 5 elements max**
 
 ## Future Algorithms 
-**Shell Sort**
-**3 way quick sort**
-**Comb Sort**
-**CockTail Sort**
-**Radix Sort**
-**Bucket Sort**
+
+ - **Shell Sort**
+ - **3 way quick sort**
+ - **Comb Sort**
+ - **CockTail Sort**
+ - **Radix Sort**
+ - **Bucket Sort**
