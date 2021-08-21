@@ -10,11 +10,12 @@ from algorithms.selection_sort import selection_sort
 from algorithms.counting_sort import counting_sort
 from algorithms.quick_sort import quick_sort
 from algorithms.heap_sort import heap_sort
+from algorithms.bogo_sort import bogo_sort
 from time import sleep
 
 
 SORTS_ARRAY = ["Bubble Sort", "Quick Sort", "Merge Sort",
-               "Insertion Sort", "Heap Sort", "Counting Sort", "Selection Sort"
+               "Insertion Sort", "Heap Sort", "Counting Sort", "Selection Sort", "Stupit Sort (MAX 5 elements)"
                ]
 root = tk.Tk()
 root.config(bg="#fff")
@@ -77,6 +78,14 @@ def sort_start(canvas, array, option, speed):
 
     if option == "Heap Sort":
         heap_sort(canvas, draw_data, speed, array)
+
+    if option == "Stupit Sort (MAX 5 elements)":
+        while len(array) > 6:
+            array.pop()
+
+        sleep(0.5)
+        bogo_sort(canvas, draw_data, array)
+
 
     sleep(0.5)
     draw_data(canvas, array, [colors.GREEN for i in range(len(array))])
