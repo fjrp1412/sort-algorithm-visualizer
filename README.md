@@ -13,10 +13,10 @@ Maded in Python3.9.6
  - **Selection Sort**
  - **Counting Sort**
  - **Stupid Sort 5 elements max**
+ - **Shell Sort**
 
 ## Future Algorithms 
 
- - **Shell Sort**
  - **3 way quick sort**
  - **Comb Sort**
  - **CockTail Sort**
